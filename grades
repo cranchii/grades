@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  double faceToFaceGrade, onlineGrade;
+
+  cout << "Please enter your face-to-face grade: ";
+  cin >> faceToFaceGrade;
+
+  cout << "Please enter your online grade: ";
+  cin >> onlineGrade;
+
+  if (faceToFaceGrade < 0 || faceToFaceGrade > 100 || onlineGrade < 0 || onlineGrade > 100) {
+    cout << "Grade should be from 0 to 100 only." << endl;
+    return 1;
+  }
+
+  double finalGrade = onlineGrade * 0.50 + (faceToFaceGrade * 0.50);
+
+  cout << "Your final grade is: " << finalGrade << endl;
+
+  if (finalGrade >= 99) {
+    cout << "Grade point equivalence: 1.00" << endl;
+    cout << "Description: Excellent" << endl;
+    
+  } else if (finalGrade >= 95) {
+    cout << "Grade point equivalence: 1.25" << endl;
+    cout << "Description: Very Good" << endl;
+    
+  } else if (finalGrade >= 90) {
+    cout << "Grade point equivalence: 1.50" << endl;
+    cout << "Description: Very Good" << endl;
+    
+  } else if (finalGrade >= 85) {
+    cout << "Grade point equivalence: 1.75" << endl;
+    cout << "Description: Good" << endl;
+    
+  } else if (finalGrade >= 80) {
+    cout << "Grade point equivalence: 2.00" << endl;
+    cout << "Description: Satisfactory" << endl;
+    
+  } else if (finalGrade >= 75) {
+    cout << "Grade point equivalence: 2.25" << endl;
+    cout << "Description: Satisfactory" << endl;
+    
+  } else if (finalGrade >= 70) {
+    cout << "Grade point equivalence: 2.50" << endl;
+    cout << "Description: Satisfactory" << endl;
+    
+  } else if (finalGrade >= 65) {
+    cout << "Grade point equivalence: 2.75" << endl;
+    cout << "Description: Passing" << endl;
+    
+  } else if (finalGrade >= 60) {
+    cout << "Grade point equivalence: 3.00" << endl;
+    cout << "Description: Passing" << endl;
+    
+  } else {
+    cout << "Grade point equivalence: 5.00" << endl;
+    cout << "Description: Failing" << endl;
+  }
+
+  return 0;
+}
